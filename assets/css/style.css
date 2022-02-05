@@ -1,0 +1,334 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/*==================== WRAPPER & CONTAINER ====================*/
+.wrapper {
+    position: relative;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+    padding: 7vh 3vw;
+}
+
+/*==================== END OF WRAPPER & CONTAINER ====================*/
+
+/*==================== TEXT FORMATTING ====================*/
+/* HEADING */
+.heading {
+    color: #FA00FF;
+    font-weight: 800;
+}
+
+h5 {
+    color: #FA00FF;
+}
+/* END OF HEADING */
+/* GLITCH */
+.glitch {
+    font-weight: 600;
+    color: white;
+    font-size: 3em;
+    position: relative;
+}
+
+.glitch:after {
+    animation: glitch-animation 2s infinite linear alternate-reverse;
+    clip: rect(0, 900px, 0, 0);
+    color: white;
+    content: attr(data-text);
+    left: 1px;
+    overflow: hidden;
+    position: absolute;
+    text-shadow: -2px 0 #FA00FF;
+}
+
+.glitch:before {
+    animation: glitch-animation-2 3s infinite linear alternate-reverse;
+    clip: rect(0, 900px, 0, 0);
+    color: white;
+    content: attr(data-text);
+    left: -1px;
+    overflow: hidden;
+    position: absolute;
+    text-shadow: 3px 0 #0077ff;
+}
+
+@keyframes glitch-animation {
+    0% {
+        clip: rect(42px, 9999px, 44px, 0)
+    }
+
+    5% {
+        clip: rect(12px, 9999px, 59px, 0)
+    }
+
+    10% {
+        clip: rect(48px, 9999px, 29px, 0)
+    }
+
+    15% {
+        clip: rect(42px, 9999px, 73px, 0)
+    }
+
+    20% {
+        clip: rect(63px, 9999px, 27px, 0)
+    }
+
+    25% {
+        clip: rect(34px, 9999px, 55px, 0)
+    }
+
+    30% {
+        clip: rect(86px, 9999px, 73px, 0)
+    }
+
+    35% {
+        clip: rect(20px, 9999px, 20px, 0)
+    }
+
+    40% {
+        clip: rect(26px, 9999px, 60px, 0)
+    }
+
+    45% {
+        clip: rect(25px, 9999px, 66px, 0)
+    }
+
+    50% {
+        clip: rect(57px, 9999px, 98px, 0)
+    }
+
+    55% {
+        clip: rect(5px, 9999px, 46px, 0)
+    }
+
+    60% {
+        clip: rect(82px, 9999px, 31px, 0)
+    }
+
+    65% {
+        clip: rect(54px, 9999px, 27px, 0)
+    }
+
+    70% {
+        clip: rect(28px, 9999px, 99px, 0)
+    }
+
+    75% {
+        clip: rect(45px, 9999px, 69px, 0)
+    }
+
+    80% {
+        clip: rect(23px, 9999px, 85px, 0)
+    }
+
+    85% {
+        clip: rect(54px, 9999px, 84px, 0)
+    }
+
+    90% {
+        clip: rect(45px, 9999px, 47px, 0)
+    }
+
+    95% {
+        clip: rect(37px, 9999px, 20px, 0)
+    }
+
+    100% {
+        clip: rect(4px, 9999px, 91px, 0)
+    }
+}
+
+@keyframes glitch-animation-2 {
+    0% {
+        clip: rect(65px, 9999px, 100px, 0)
+    }
+
+    5% {
+        clip: rect(52px, 9999px, 74px, 0)
+    }
+
+    10% {
+        clip: rect(79px, 9999px, 85px, 0)
+    }
+
+    15% {
+        clip: rect(75px, 9999px, 5px, 0)
+    }
+
+    20% {
+        clip: rect(67px, 9999px, 61px, 0)
+    }
+
+    25% {
+        clip: rect(14px, 9999px, 79px, 0)
+    }
+
+    30% {
+        clip: rect(1px, 9999px, 66px, 0)
+    }
+
+    35% {
+        clip: rect(86px, 9999px, 30px, 0)
+    }
+
+    40% {
+        clip: rect(23px, 9999px, 98px, 0)
+    }
+
+    45% {
+        clip: rect(85px, 9999px, 72px, 0)
+    }
+
+    50% {
+        clip: rect(71px, 9999px, 75px, 0)
+    }
+
+    55% {
+        clip: rect(2px, 9999px, 48px, 0)
+    }
+
+    60% {
+        clip: rect(30px, 9999px, 16px, 0)
+    }
+}
+
+/* END OF GLITCH */
+
+/* BTN-ANIMATION */
+.btn-animation {
+    background-image: linear-gradient(45deg, #FFFFFF 50%, white 50%);
+    background-size: 270%;
+    background-repeat: repeat;
+    background-position: top right;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    animation: button-animation 0.65s 0.15s ease-out forwards;
+}
+
+a:hover,
+a:hover span {
+    animation: button-animation-rev 0.65s ease-out forwards;
+}
+
+a:hover{
+    box-shadow: 0 0 20px #FA00FF,
+                inset 0 0 0 2px #fff;
+}
+
+@keyframes button-animation {
+    0% {
+        background-position: top right
+    }
+
+    100% {
+        background-position: top left
+    }
+}
+
+@keyframes button-animation-rev {
+    0% {
+        background-position: top left
+    }
+
+    100% {
+        background-position: top right
+    }
+}
+
+a {
+    background-image: linear-gradient(45deg, black 50%, #FA00FF 50%);
+    background-size: 270%;
+    background-repeat: repeat;
+    background-position: top right;
+    animation: button-animation 0.65s 0.15s ease-out forwards;
+    text-decoration: none;
+    cursor: pointer;
+    padding: .6em;
+}
+
+a span {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+}
+
+p {
+    text-align: justify;
+    color: #8b8b8b;
+    font-size: 1.1em;
+}
+
+/*==================== END OF TEXT FORMATTING ====================*/
+
+.home {
+    height: 100vh;
+}
+
+.img-profile {
+    width: 15%;
+}
+
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    bottom: 0;
+    padding: 0 50px 0 0;
+    float: right;
+    margin-top: 210px;
+    width: 50px;
+}
+
+
+/* ABOUT SECTION */
+/* .about, .skill {
+    height: 70vh;
+} */
+
+.img-about {
+    transition: 1s all;
+}
+
+.img-about:hover, .swiper-slide img:hover {
+    box-shadow: 0 1px 30px #FA00FF,
+                inset 0 0 0 3px #fff;
+    cursor: pointer;
+}
+/* END OF ABOUT SECTION */
+
+.projects-container {
+    position: relative;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
